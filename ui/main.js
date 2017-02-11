@@ -22,7 +22,7 @@ submit.onclick = function()
                 list.innerHTML = allcomments;
             }
         }
-    }
+    };
     
 var usercomment = document.getElementById('comment');
 var comment = usercomment.value;
