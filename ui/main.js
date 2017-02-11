@@ -1,9 +1,8 @@
+var usercomment = document.getElementById('comment');
+var comment = usercomment.value;
+var submit = document.getElementById('submitcomment');
 
-<html>
-    <head>
-        <title>Technology Blog </title>
-    </head>
+submit.onclick = function()
+{
     
-    
-    
-</html>
+};
