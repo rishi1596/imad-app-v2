@@ -1,1 +1,9 @@
-console.log('Loaded!');
+
+<html>
+    <head>
+        <title>Technology Blog </title>
+    </head>
+    
+    
+    
+</html>
