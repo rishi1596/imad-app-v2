@@ -7,6 +7,11 @@
 function submit1()
 {
     var request = new XMLHttpRequest();
+    var usercomment = document.getElementById('commentarea');
+    var commenttext = usercomment.value;
+
+    reuest.open('GET', 'http://rishi1596.imad.hasura-app.io/article-comment?commenttext=' + commenttext,true);
+    request.send(null);
     
     request.onreadystateChange = function()
     {
@@ -27,11 +32,7 @@ function submit1()
         }
     };
     
-var usercomment = document.getElementById('commentarea');
-var commenttext = usercomment.value;
 
-reuest.open('GET', 'http://rishi1596.imad.hasura-app.io/article-comment?commenttext=' + commenttext,true);
-request.send(null);
 }
         </script>
     </head>
