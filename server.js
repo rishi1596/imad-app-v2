@@ -17,13 +17,13 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
-var comments = [];
+var allcomments = [];
 app.get('/article-comment', function (req, res) {
- var comment = req.query.comment;
+ var onecomment = req.query.commenttext;
  
- comments.push(comment);
+ allcomments.push(onecomment);
  
- res.send(JSON.stringify(comments));
+ res.send(JSON.stringify(allcomments));
  
 });
 
