@@ -18,7 +18,7 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 var allcomments = [];
-app.get('/article-comment', function (req, res) {
+app.get('/:article-comment', function (req, res) {
  var onecomment = req.query.commenttext;
  
  allcomments.push(onecomment);
