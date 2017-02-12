@@ -1,5 +1,5 @@
 
-var submit = document.getElementById('submitcomment');
+var submit = document.getElementById('commentsubmit');
 
 submit.onclick = function()
 {
@@ -24,9 +24,9 @@ submit.onclick = function()
         }
     };
     
-var usercomment = document.getElementById('comment');
-var comment = usercomment.value;
+var usercomment = document.getElementById('commentarea');
+var commenttext = usercomment.value;
 
-reuest.open('GET','http://rishi1596.imad.hasura-app.io/article-comment?comment=' + comment,true);
+reuest.open('GET','http://rishi1596.imad.hasura-app.io/article-comment?comment=' + commenttext,true);
 request.send(null);
 };
