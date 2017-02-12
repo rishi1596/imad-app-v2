@@ -27,6 +27,6 @@ submit.onclick = function()
 var usercomment = document.getElementById('commentarea');
 var commenttext = usercomment.value;
 
-reuest.open('GET', 'http://rishi1596.imad.hasura-app.io/article-comment?commenttext=' + commenttext,true);
+request.open('GET', 'http://rishi1596.imad.hasura-app.io/article-comment?commenttext=' + commenttext,true);
 request.send(null);
 };
