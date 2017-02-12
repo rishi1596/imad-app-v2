@@ -2,7 +2,39 @@
 <html>
     <head>
         <link href="/ui/style.css" rel="stylesheet" />
-         <script type="text/javascript" src="main.js">
+         <script type="text/javascript" >
+            
+var submit = document.getElementById('commentsubmit');
+
+submit.onclick = function()
+{
+    var request = new XMLHttpRequest();
+    
+    request.onreadystateChange = function()
+    {
+        if(request.readyState === XMLHttpRequest.DONE)
+        {
+            if(request.status === 200)
+            {
+                var comments = request.responseText;
+                comments = JSON.parse(comments);
+                var allcomments = '';
+                for(var i = 0; i<comments.length ; i++)
+                {
+                    allcomments == '<li>' + comments[i] + '</li>';
+                }
+                var list = document.getElementById('commentlist');
+                list.innerHTML = allcomments;
+            }
+        }
+    };
+    
+var usercomment = document.getElementById('commentarea');
+var commenttext = usercomment.value;
+
+reuest.open('GET', 'http://rishi1596.imad.hasura-app.io/article-comment?commenttext=' + commenttext,true);
+request.send(null);
+};
         </script>
     </head>
     <body>
