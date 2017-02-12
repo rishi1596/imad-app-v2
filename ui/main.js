@@ -16,7 +16,7 @@ submit.onclick = function()
                 var allcomments = '';
                 for(var i = 0; i<comments.length ; i++)
                 {
-                    allcomments = '<li>' + comments[i] + '</li>';
+                    allcomments == '<li>' + comments[i] + '</li>';
                 }
                 var list = document.getElementById('commentlist');
                 list.innerHTML = allcomments;
