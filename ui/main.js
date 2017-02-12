@@ -7,9 +7,9 @@ submit.onclick = function()
     
     request.onreadystateChange = function()
     {
-        if(request.readyState == XMLHttpRequest.DONE)
+        if(request.readyState === XMLHttpRequest.DONE)
         {
-            if(request.status == 200)
+            if(request.status === 200)
             {
                 var comments = request.responseText;
                 comments = JSON.parse(comments);
